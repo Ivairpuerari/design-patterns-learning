@@ -27,7 +27,6 @@ O padrão Abstract Factory é bastante comum no código Java. Muitas frameworks 
 
 		Concrete Factory implements IFactory (CFactory)
 				IObject MethodBuild(Type)
-//
 
 		Business():
 			IObject obj;
