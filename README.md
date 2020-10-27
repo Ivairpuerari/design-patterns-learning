@@ -47,7 +47,35 @@ O padrão Abstract Factory é bastante comum no código Java. Muitas frameworks 
 			
 			business.Method();
 			
+- Factory method:  
+Define um método, que deve ser usado para criar objetos em vez da chamada direta ao construtor (operador new). As subclasses podem substituir esse método para alterar a classe de objetos que serão criados.	
+
+	Identificação: Os métodos fábrica podem ser reconhecidos por métodos de criação, que criam objetos de classes concretas, mas os retornam como objetos de tipo ou interface abstrata.
+	
+	Abstract Interface Object (IObject)
+				IMethod();
+
+		Concrete class of Object implements IObject (CObject)
+				 Method();
+
+		Abstract Class Factory (AFactory)
+					void show():
+						print('Hello !');
+					
+					@override
+					IObject MethodBuild(Type)
+
+		Concrete Factory extends AFactory (CFactory)
+				@override
+				IObject MethodBuild(Type):
+					retun new CObject();	
+
+		Main():
+			CFactory fct = new CFactory();
 			
+			fct.MethodBuild();
+			
+			fct.Show();
 			
 			
 `<Referência>` : <https://refactoring.guru/pt-br/design-patterns>
